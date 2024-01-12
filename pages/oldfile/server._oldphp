@@ -1,0 +1,18 @@
+<?php
+error_reporting(E_ALL ^ E_NOTICE);
+session_start();
+
+// กำหนดค่าว่าง
+$username = "";
+$email = "";
+$errors = array();
+
+//ตั้งค่าฐานข้อมูล
+$db_server_name = "localhost";
+$db_username = "root";
+$db_password = "";
+$db_name = "login_db";
+
+//connect to db เชื่อมต่อฐานข้อมูล
+$db = mysqli_connect($db_server_name, $db_username, $db_password, $db_name) or die("Could not connect to database");
+?>
